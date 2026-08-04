@@ -1,0 +1,25 @@
+# Adaptive SAHI: crop sized from geometry to a single target body length.
+/cetacean_detector:
+  ros__parameters:
+    inference_mode: adaptive
+    model_path: /home/dell/cetacean-detection-final/runs/train/E0_s/weights/best.pt
+    image_topic: /camera/image_raw
+    altitude_topic: /rel_alt
+    gsd_topic: /gsd
+    class_name: cetacean
+    device: cuda:0
+    conf: 0.3
+    iou: 0.45
+    imgsz: 1024
+    overlap: 0.2
+    target_px: 45.0
+    skip_px: 45.0
+    min_slice: 512
+    target_len_m: 3.0
+    # Optional geometry anchors (used when telemetry topics are absent):
+    # camera: phaseone_ixm_rs150f
+    # focal_mm: 70.0
+    # gsd: 0.0            # m/px override
+    # altitude_m: 0.0     # static fallback [m]
+    blind_slices: [512, 1024, 2048]
+    publish_annotated: true

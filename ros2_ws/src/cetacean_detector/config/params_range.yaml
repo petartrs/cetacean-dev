@@ -1,0 +1,23 @@
+# Adaptive-range SAHI: crop sized so the largest expected animal still fits one
+# tile, keeping large and small animals resolvable across a size range.
+/cetacean_detector:
+  ros__parameters:
+    inference_mode: adaptive_range
+    model_path: /home/dell/cetacean-detection-final/runs/train/E0_s/weights/best.pt
+    image_topic: /camera/image_raw
+    altitude_topic: /rel_alt
+    gsd_topic: /gsd
+    class_name: cetacean
+    device: cuda:0
+    conf: 0.3
+    iou: 0.45
+    imgsz: 1024
+    overlap: 0.2
+    target_px: 45.0
+    skip_px: 45.0
+    min_slice: 512
+    target_len_m: 3.0
+    max_len_m: 18.0
+    max_fill: 0.8
+    blind_slices: [512, 1024, 2048]
+    publish_annotated: true

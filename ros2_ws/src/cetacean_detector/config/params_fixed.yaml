@@ -1,0 +1,16 @@
+# Fixed SAHI: one crop size for every frame, geometry ignored.
+/cetacean_detector:
+  ros__parameters:
+    inference_mode: fixed
+    model_path: /home/dell/cetacean-detection-final/runs/train/E0_s/weights/best.pt
+    image_topic: /camera/image_raw
+    altitude_topic: /rel_alt
+    gsd_topic: /gsd
+    class_name: cetacean
+    device: cuda:0
+    conf: 0.3
+    iou: 0.45
+    imgsz: 1024
+    overlap: 0.2
+    fixed_slice: 1024
+    publish_annotated: true

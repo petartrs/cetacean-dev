@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Virtual environments (recreate from requirements*.txt)
+ml-venv/
+labelstudio-venv/
+*-venv/
+.venv/
+venv/
+
+# Data — 57 GB of imagery, NOT tracked. See data/README.md to obtain the sources.
+data/
+!data/README.md
+
+# Training / evaluation outputs (regenerate; caches can be large)
+runs/
+
+# Label Studio runtime
+labelstudio/
+*.log
+
+# ROS 2 build artefacts (if a workspace is built here)
+ros2_ws/build/
+ros2_ws/install/
+ros2_ws/log/
+
+# LaTeX build artefacts + bundled tectonic binary
+paper/.tools/
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NOTE: models/*.pt ARE committed on purpose (six trained weights, ~46 MB total).

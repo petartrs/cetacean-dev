@@ -1,0 +1,9 @@
+# Developer extras: dataset building, training plots, web scraping.
+# Installs the runtime stack too.
+-r requirements.txt
+
+matplotlib==3.10.9   # training curves + benchmark plots
+roboflow             # dataset downloads (scripts/scrape_aerial_cetaceans.py, build_dataset.py)
+
+# Label Studio (pseudo-labelling loop) runs in its OWN isolated venv — do NOT
+# install it here, it conflicts with the CUDA stack. See requirements-labelstudio.txt.

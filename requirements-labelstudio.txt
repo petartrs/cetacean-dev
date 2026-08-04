@@ -1,0 +1,9 @@
+# Label Studio pseudo-labelling environment — ISOLATED venv, kept separate from
+# the CUDA/torch stack (they conflict on shared deps).
+#
+#   python3 -m venv labelstudio-venv
+#   source labelstudio-venv/bin/activate
+#   pip install -r requirements-labelstudio.txt
+#
+# Run:  label-studio start --port 8080
+label-studio==1.23.0

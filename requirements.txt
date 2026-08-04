@@ -1,0 +1,31 @@
+# Runtime / inference stack for the cetacean adaptive-SAHI pipeline.
+# Pinned to the exact versions this project was built and verified on
+# (Python 3.10, CUDA 13.0 wheels). See docs/SETUP.md for the CUDA note.
+#
+#   python3 -m venv --system-site-packages ml-venv   # system-site for ROS bridge
+#   source ml-venv/bin/activate
+#   pip install -r requirements.txt
+#   pip install -e .
+#
+# NOTE on torch: install the build that matches your GPU/driver. The versions
+# below are the ones we validated. For CUDA 13.0 wheels:
+#   pip install torch==2.12.1 torchvision==0.27.1 --index-url https://download.pytorch.org/whl/cu130
+# For CPU-only, drop the --index-url (much slower inference).
+
+# --- deep learning ---
+torch==2.12.1
+torchvision==0.27.1
+ultralytics==8.4.84
+
+# --- sliced / adaptive inference ---
+sahi==0.12.1
+shapely==2.1.2
+
+# --- image + numerics ---
+numpy==2.2.6
+opencv-python==5.0.0.93
+pillow==12.3.0
+
+# --- config + utils ---
+pyyaml==6.0.3
+tqdm==4.68.3
