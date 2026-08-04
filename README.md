@@ -7,8 +7,8 @@ harnesses, the scale-aware inference tooling, the ROS 2 node source, and the
 LaTeX paper.
 
 > If you just want to *run the detector on a robot/aircraft*, use the separate
-> deployment repo **cetacean-detector-ros2** instead. This repo is for
-> understanding, reproducing and extending the work.
+> deployment repo [**cetacean-detector-ros2**](https://github.com/petartrs/cetacean-detector-ros2)
+> instead. This repo is for understanding, reproducing and extending the work.
 
 ---
 
@@ -197,8 +197,8 @@ it, or run `tectonic main.tex` directly.
 
 `ros2_ws/src/cetacean_detector/` is a copy of the deployment node for reference.
 The **canonical, self-contained** version for building on the aircraft lives in
-the companion repo **cetacean-detector-ros2** (it vendors
-`cetacean/inference/adaptive_sahi.py` so it needs nothing from this repo).
+the companion repo [**cetacean-detector-ros2**](https://github.com/petartrs/cetacean-detector-ros2)
+(it vendors `cetacean/inference/adaptive_sahi.py` so it needs nothing from this repo).
 
 ---
 
@@ -207,3 +207,10 @@ the companion repo **cetacean-detector-ros2** (it vendors
 See [`AGENTS.md`](AGENTS.md) for a machine-readable onboarding (build/test
 commands, conventions, gotchas) and [`plan/plan.md`](plan/plan.md) for the
 original plan. Open workstreams are listed at the end of `AGENTS.md`.
+
+---
+
+## License
+
+MIT — see [`LICENSE`](LICENSE). © 2026 SurveyLabs Ltd. (AEROSUB, HORIZON Europe
+GA 101189723).
